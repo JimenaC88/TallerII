@@ -1,0 +1,287 @@
+/* stylelint-disable stylistic/selector-list-comma-newline-after */
+
+.blog-header-logo {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif/*rtl:Amiri, Georgia, "Times New Roman", serif*/;
+  font-size: 2.25rem;
+  margin-left: 40%;
+}
+
+.blog-header-logo:hover {
+  text-decoration: underline;
+  
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif/*rtl:Amiri, Georgia, "Times New Roman", serif*/;
+  text-align: center;
+}
+
+.flex-auto {
+  flex: 0 0 auto;
+}
+
+.h-250 { height: 250px; }
+@media (min-width: 768px) {
+  .h-md-250 { height: 250px; }
+}
+
+/* Pagination */
+.blog-pagination {
+  margin-bottom: 0%;
+}
+
+/*
+ * Blog posts
+ */
+.blog-post {
+  margin-bottom: 0%;
+}
+.blog-post-meta {
+  margin-bottom: 0%;
+  color: #0e6b4d;
+}
+video {
+  max-width: 50%;
+  height: auto;
+  margin-left: 25%;
+  margin-top: 5%;
+  
+}
+.fondo_1{
+  background-color: #99c0b4;
+  
+  
+}
+.fondo_frida{
+  background-color: #99c0b4;
+  margin: 10%;
+  border-color: azure;
+  border-style: solid;
+}
+.collage_Frida{
+  margin-left: 5%;
+  margin-bottom: 5%;
+  margin-top: 5%;
+  border-color: black;
+  border-style: solid;
+  border-width: 25%;
+  border-radius: 2%;
+}
+
+.display-4{
+  font-display: underline;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+ .container{
+  background-color: rgb(240, 232, 196);
+  margin-left: 0%;
+  margin-right: 0%;
+  width: 100%;
+  border-left: black;
+  border-right: black;
+  border-style: solid;  
+}
+.lead-my-3, p{
+  font-family: 'Lucida Sans Unicode';
+  font-style: oblique;
+  font-size: 150%;
+}
+h1{
+  text-decoration:underline;
+}
+.nav-item{
+  text-decoration: underline;
+}
+
+.body-frida{
+  background-color: #99c0b4;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+.video-frida-1{
+  border-image: 5%;
+  border-color: black;
+  border-style: solid;
+
+}
+.logo-seccion{
+  float: right;
+  border-image: 5%;
+  border-color: black;
+  border-style: solid;
+  border-radius: 20px;
+  padding: 3px;
+}
+
+.presentando-a-frida{
+  display: flex;
+  justify-content: center;
+  overflow:visible;
+}
+.presentando-a-frida img{
+  margin: 10px;
+  border-image: 5%;
+  border-color: black;
+  border-style: solid;
+  transition: transform 1s ease
+}
+.margen{
+  margin-right: -15%;
+  margin-left: -15%;
+  border-right: black;
+  border-left: black;
+  border-style: solid;
+}
+.presentando-invierno{
+  height: max-content;
+  margin-bottom: 10%;
+}
+.video-amigos{
+  
+  height: 50%;
+  width: 100%;
+}
+.video-invierno{
+  height: 500%;
+  width: 500%;
+}
+.card-text{
+  font-size: large;
+  font-weight: bold;
+  
+}
+.presentando-a-frida img:hover{
+  transform: scale(2.0);
+}
+.paseando{
+  display:list-item;
+  justify-content: center;
+  overflow:visible;
+  margin: 5%;
+  width: 90%;
+  
+}
+.imagenes_de_rosario{
+  border-width: 10%;
+  border-color: azure;
+  border-style: solid;
+  transition: transform 1s ease;
+  float: left;
+  margin-right: 1%;
+  border-radius: 5%;
+}
+
+.paseando img:hover{
+  transform: scale(2);
+}
+.cont-card-paseando{
+  display: flex;
+  align-items:safe;
+  justify-content: center;
+  border-color: black;
+border-style: solid;
+border-width: 15%;  
+border-radius: 10px;
+background-color: #99c0b4;
+margin-bottom: 5%;
+}
+.paseando div>p{
+  flex-grow: 1;
+  margin-right: 0%;
+  font-size: x-large;
+} 
+.fondo-frida, .fondo_1{
+  margin-left: 6%;
+  margin-right: 6%;
+  border-left: #ce4d8b;
+  border-right: #ce4d8b;
+  border-style: solid;
+  border-width: 15px;
+}
+
+.navbar{
+  margin-bottom: 3%;
+}
+.navbar a{
+  padding-right: 6%;
+  border-right: black;
+  border-style: solid;
+  margin:0%;
+}
+.navbar a:last-child{
+  border: 0;
+}
+.navbar a:hover{
+    zoom: 150%;
+}
+.logo-seccion:hover{
+  zoom: 200%;
+}
+.card-paseando{
+  width: 50%;
+  margin: 1%;
+ border-radius: 5%;
+background-color: rgb(240, 232, 196); 
+  border-color: #ce4d8b;
+  border-width: 3px;
+  border-style: solid;
+}
+.saladillo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #99c0b4;
+  border-color: black;
+border-style: solid;
+border-width: 15%;  
+border-radius: 10px;
+margin-bottom: 10%;
+
+}
+.saladillo video{
+  margin: 1%;
+  width: 30%;
+  border-color: #ce4d8b;
+  border-style: solid;
+}
+.OMG{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10%;
+  margin-bottom: 5%;
+}
+.OMG img{
+  margin: 0.5%;
+  width: 15%;
+  border-color: #ce4d8b;
+  border-width: 1px;
+  border-style: solid;
+  transition: transform 1s ease;
+}
+.OMG img:hover{
+  transform: scale(2);
+}
+footer{
+  background-color: #99c0b4;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 1%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer a{
+ font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+ color: black; 
+}
+.title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3%;
+}
+.Onna{
+  height: 120px;
+}
