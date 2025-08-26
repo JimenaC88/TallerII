@@ -47,7 +47,7 @@ char* reverse(char *string){
       }
       free(invertida);
       invertida=NULL;
-      for(int i=largo-1; i>-1; i--){
+      for(int i=largo-1; i>=0; i--){
         rev[cont]=*(string+i);
         cont++;
       }
@@ -67,7 +67,7 @@ void strIzq(char *destino, const char *origen){
             while(*origen+cont==' '){
                 cont++;
                 origen++;
-            }
+           }
 
       for(int i=cont; i<largo+1; i++){
                 origen+cont;
@@ -78,9 +78,10 @@ void strIzq(char *destino, const char *origen){
 
 }// Saca blancos Izq.
 void strDer(char *destino, const char *origen){
-      char *copia=reverse(origen);
-      strIzq(reverse(destino), copia);
 
+      strIzq(destino, origen);
+      char *ptD=destino;
+      strIzq(destino, reverse(reverse(ptD)));
 }//Saca blancos Der.
 void strAmbos(char *destino, const char *origen){
       strIzq(destino, origen);
