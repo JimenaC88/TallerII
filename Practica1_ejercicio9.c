@@ -22,6 +22,7 @@ int strVacio(const char *origen){
     return r;
 }//retorna 1 si tiene al menos un caracter, 0 en otro caso
 void strCopia(char *destino, const char *origen){
+
        int largo =strlen(origen);
        for(int i=0; i<largo+1; i++){
         *destino=*origen;
@@ -53,7 +54,7 @@ char* reverse(char *string){
       }
 
       static char resultado[1000];
-      for(int i=0; i<largo; i++){
+      for(int i=0; i<largo+1; i++){
       resultado[i]=rev[i];
       }
       invertida=&resultado;
@@ -64,24 +65,23 @@ char* reverse(char *string){
 void strIzq(char *destino, const char *origen){
       int largo=strlen(origen);
       int cont=0;
-            while(*origen+cont==' '){
-                cont++;
-                origen++;
-           }
-
-      for(int i=cont; i<largo+1; i++){
-                origen+cont;
-                *destino=*origen;
-                origen++;
-                destino++;
+      char copia[largo];
+      for(int i=0; i<largo+1; i++){
+        copia[i]=*(origen+i);
       }
+            while(copia[cont]==' '){
+                cont++;
 
+           }
+           strCopia(destino, origen+cont);
 }// Saca blancos Izq.
 void strDer(char *destino, const char *origen){
 
       strIzq(destino, origen);
-      char *ptD=destino;
-      strIzq(destino, reverse(reverse(ptD)));
+      strIzq(destino, reverse(destino));
+      strIzq(destino, destino);
+
+
 }//Saca blancos Der.
 void strAmbos(char *destino, const char *origen){
       strIzq(destino, origen);
@@ -91,7 +91,7 @@ void strMayMin(char *destino, const char *origen, may_min m){
 }//Convierte May. Min.
 
 int ej9(){
-char *text1= " Sera Cierto  ?? ";
+char *text1= "            Sera Cierto  ??             ";
 int largo=strLargo(text1)+1;
 char *result= ((char *)malloc (largo));
 char *reves;
