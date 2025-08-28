@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -147,10 +146,20 @@ void strAmbos(char *destino, const char *origen){
 
 }//Saca blancos Izq. y Der.
 void strMayMin(char *destino, const char *origen, may_min m){
+    int largo=strlen(origen);
+    if(m==MAYUSCULAS){
+    for(int i=0; i<largo+1; i++){
+    *(destino+i)=toupper((unsigned char)*(origen+i));
+    }
+    }else if(m==MINUSCULAS){
+    for(int i=0; i<largo+1; i++){
+        *(destino+i)=tolower((unsigned char)*(origen+i));
+    }
+    }
 }//Convierte May. Min.
 
 int ej9(){
-char *text1= "            Sera Cierto  ??             ";
+char *text1= "  Sera Cierto  ??  ";
 int largo=strLargo(text1)+1;
 char *result= ((char *)malloc (largo));
 char *reves;
@@ -171,12 +180,11 @@ printf("Sin blancos a la Der:");
 puts(result);
 strAmbos(result, text1);
 printf("Ambos: [%s], sin blancos al principio ni al final.\n", result);
-/*strMayMin(result, text1, MAYUSCULAS);
+strMayMin(result, text1, MAYUSCULAS);
 printf("Mayusculas: [%s]\n", result);
 strMayMin(result, text1, MINUSCULAS);
-printf("Minusculas: [%s]\n", result);*/
+printf("Minusculas: [%s]\n", result);
 reves=reverse(text1);
 printf("La cadena: %s invertida queda: %s\n", text1, reves);
 return 0;
 }
-
