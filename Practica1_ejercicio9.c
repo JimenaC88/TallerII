@@ -107,7 +107,7 @@ void strAmbos(char *destino, const char *origen){
       int largo=strlen(origen);
       int cont2=0;
       char copiado[largo];
-      for(int i=0; i<largo+1; i++){
+      for(int i=0; i<(largo); i++){
         copiado[i]=*(origen+i);
       }
             while(copiado[cont2]==' '){
@@ -117,12 +117,12 @@ void strAmbos(char *destino, const char *origen){
       int cont=0;
 
       char copia[largo];
-      for(int i=largo-1; i>=0; i--){
+      for(int i=largo; i>=0; i--){
         copia[cont]=*(origen+i);
         cont++;
       }
 
-      cont=largo-1;
+      cont=largo;
       int cont1=0;
 
             while(copia[cont]==' '){
@@ -132,13 +132,13 @@ void strAmbos(char *destino, const char *origen){
            }
       char copia1[largo-cont1];
       int cont3=0;
-      for(int i=cont2; i<largo-cont1; i++){
+      for(int i=cont2; i<(largo-cont1); i++){
             copia1[i]=*(origen+i);
             cont3++;
 
 
       }
-      for(int i=cont2; i<largo-cont1+1; i++){
+      for(int i=cont2; i<(largo-cont1); i++){
         *destino=copia1[i];
         destino++;
       }
