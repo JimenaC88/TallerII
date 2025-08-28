@@ -73,19 +73,78 @@ void strIzq(char *destino, const char *origen){
                 cont++;
 
            }
+
            strCopia(destino, origen+cont);
 }// Saca blancos Izq.
 void strDer(char *destino, const char *origen){
 
-      strIzq(destino, origen);
-      strIzq(destino, reverse(destino));
-      strIzq(destino, destino);
+      int largo=strlen(origen);
+      int cont=0;
+      char copia[largo];
+      for(int i=largo-1; i>=0; i--){
+        copia[cont]=*(origen+i);
+        cont++;
+      }
+
+      cont=largo-1;
+      int cont1=0;
+
+            while(copia[cont]==' '){
+                cont1++;
+                cont--;
+
+           }
+      for(int i=0; i<largo-cont1; i++){
+            *destino=*origen;
+            destino++;
+            origen++;
+
+      }
 
 
 }//Saca blancos Der.
 void strAmbos(char *destino, const char *origen){
-      strIzq(destino, origen);
-      strDer(destino, origen);
+
+      int largo=strlen(origen);
+      int cont2=0;
+      char copiado[largo];
+      for(int i=0; i<largo+1; i++){
+        copiado[i]=*(origen+i);
+      }
+            while(copiado[cont2]==' '){
+                cont2++;
+
+           }
+      int cont=0;
+
+      char copia[largo];
+      for(int i=largo-1; i>=0; i--){
+        copia[cont]=*(origen+i);
+        cont++;
+      }
+
+      cont=largo-1;
+      int cont1=0;
+
+            while(copia[cont]==' '){
+                cont1++;
+                cont--;
+
+           }
+      char copia1[largo-cont1];
+      int cont3=0;
+      for(int i=cont2; i<largo-cont1; i++){
+            copia1[i]=*(origen+i);
+            cont3++;
+
+
+      }
+      for(int i=cont2; i<largo-cont1+1; i++){
+        *destino=copia1[i];
+        destino++;
+      }
+
+
 }//Saca blancos Izq. y Der.
 void strMayMin(char *destino, const char *origen, may_min m){
 }//Convierte May. Min.
@@ -108,6 +167,9 @@ strIzq(result, text1);
 printf("Sin blancos a la Izq:");
 puts(result);
 strDer(result, text1);
+printf("Sin blancos a la Der:");
+puts(result);
+strAmbos(result, text1);
 printf("Ambos: [%s], sin blancos al principio ni al final.\n", result);
 /*strMayMin(result, text1, MAYUSCULAS);
 printf("Mayusculas: [%s]\n", result);
